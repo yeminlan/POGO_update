@@ -154,3 +154,4 @@ RENAME TABLE data_new TO data;
 RENAME TABLE data_and_taxonomy_new TO data_and_taxonomy;
 
 # POGO update completed. Yeah!
+
