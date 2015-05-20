@@ -1,0 +1,18 @@
+#!/bin/bash
+#$ -S /bin/bash
+#$ -cwd
+#$ -V
+#$ -M yl497@drexel.edu
+#$ -P rosenPrj
+#$ -l h_rt=72:00:00
+#$ -l h_vmem=8G
+#$ -q all.q
+. /etc/profile.d/modules.sh
+module load shared
+module load proteus
+module load sge/univa
+module load gcc/4.8.1
+
+matlab -nodisplay -nosplash -nodesktop -r "addpath ../codes; realign_besthits('uidA','uidB'); exit";
+echo successful
+

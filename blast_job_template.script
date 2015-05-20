@@ -1,0 +1,19 @@
+#!/bin/bash
+#$ -S /bin/bash
+#$ -cwd
+#$ -V
+#$ -M yl497@drexel.edu
+#$ -P rosenPrj
+#$ -l h_rt=72:00:00
+#$ -l h_vmem=8G
+#$ -q all.q
+. /etc/profile.d/modules.sh
+module load shared
+module load proteus
+module load sge/univa
+module load gcc/4.8.1
+
+blastp -outfmt 6 -query /scratch/yl497/CDS/uidA.faa -db /scratch/yl497/blastdb/uidB -out /scratch/yl497/1v2/uidA_vs_uidB.blasttabularout
+blastp -outfmt 6 -query /scratch/yl497/CDS/uidB.faa -db /scratch/yl497/blastdb/uidA -out /scratch/yl497/2v1/uidB_vs_uidA.blasttabularout
+echo successful
+
