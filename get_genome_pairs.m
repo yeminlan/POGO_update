@@ -27,6 +27,22 @@ end
 fclose(f);
 clear f ans i
 
+% write to file new_genome_names.list
+f=fopen('new_genome_names.list','wt');
+for i = 1:numel(new_genomes)
+    fprintf(f,[new_genomes{i},'\n']);
+end
+fclose(f);
+clear f ans i
+
+% write to file new_genome_uids.list
+f=fopen('new_genome_uids.list','wt');
+for i = 1:numel(new_uid)
+    fprintf(f,[new_uid{i},'\n']);
+end
+fclose(f);   
+clear f ans i
+
 % get numberofgenes for each new_genome
 numberofgenes = zeros(numel(new_uid),1);
 for i = 1:numel(new_uid)
