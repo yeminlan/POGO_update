@@ -153,9 +153,4 @@ RENAME TABLE taxonomy_api_new TO taxonomy_api;
 RENAME TABLE data_new TO data;
 RENAME TABLE data_and_taxonomy_new TO data_and_taxonomy;
 
-
-
-717861+1:1406217
-688356
-for i in `cat listA.txt`;do cp blast_files/1v2/$i ../blast_files/1v2;done
-for i in `cat listB.txt`;do cp blast_files/2v1/$i ../blast_files/2v1;done
+# POGO update completed. Yeah!
