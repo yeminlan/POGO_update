@@ -134,7 +134,7 @@ cd ..
 mv update/ POGO_v2/
 
 # 20.MySQL
-mysql -u root --local-infile=1 -p data_new #note the pwd is "who gave groupies loose leaf"
+mysql -u root --local-infile=1 -p data_new
 
 CREATE TABLE taxonomy_new LIKE taxonomy; 
 LOAD DATA LOCAL INFILE 'POGO_taxonomy.csv' INTO TABLE taxonomy_new FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
