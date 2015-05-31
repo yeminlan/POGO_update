@@ -135,23 +135,21 @@ mv update/ POGO_v2/
 
 # 20.MySQL
 mysql -u root --local-infile=1 -p data_new
-
-CREATE TABLE taxonomy_new LIKE taxonomy; 
-LOAD DATA LOCAL INFILE 'POGO_taxonomy.csv' INTO TABLE taxonomy_new FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
-CREATE TABLE taxonomy_api_new select * from taxonomy_new;
-CREATE TABLE data_new LIKE data; 
-LOAD DATA LOCAL INFILE 'POGO_data.csv' INTO TABLE data_new FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
-CREATE TABLE data_and_taxonomy_new LIKE data_and_taxonomy; 
-LOAD DATA LOCAL INFILE 'POGO_data_and_taxonomy.csv' INTO TABLE data_and_taxonomy_new FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
-
-RENAME TABLE taxonomy TO taxonomy_bak;
-RENAME TABLE taxonomy_api TO taxonomy_api_bak;
-RENAME TABLE data TO data_bak;
-RENAME TABLE data_and_taxonomy TO data_and_taxonomy_bak;
-RENAME TABLE taxonomy_new TO taxonomy;
-RENAME TABLE taxonomy_api_new TO taxonomy_api;
-RENAME TABLE data_new TO data;
-RENAME TABLE data_and_taxonomy_new TO data_and_taxonomy;
+# CREATE TABLE taxonomy_new LIKE taxonomy; 
+# LOAD DATA LOCAL INFILE 'POGO_taxonomy.csv' INTO TABLE taxonomy_new FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+# CREATE TABLE taxonomy_api_new SELECT * FROM taxonomy_new;
+# CREATE TABLE data_new LIKE data; 
+# LOAD DATA LOCAL INFILE 'POGO_data.csv' INTO TABLE data_new FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+# CREATE TABLE data_and_taxonomy_new LIKE data_and_taxonomy; 
+# LOAD DATA LOCAL INFILE 'POGO_data_and_taxonomy.csv' INTO TABLE data_and_taxonomy_new FIELDS TERMINATED BY '\t' LINES TERMINATED BY '\n' IGNORE 1 ROWS;
+# RENAME TABLE taxonomy TO taxonomy_bak;
+# RENAME TABLE taxonomy_api TO taxonomy_api_bak;
+# RENAME TABLE data TO data_bak;
+# RENAME TABLE data_and_taxonomy TO data_and_taxonomy_bak;
+# RENAME TABLE taxonomy_new TO taxonomy;
+# RENAME TABLE taxonomy_api_new TO taxonomy_api;
+# RENAME TABLE data_new TO data;
+# RENAME TABLE data_and_taxonomy_new TO data_and_taxonomy;
 
 # POGO update completed. Yeah!
 
